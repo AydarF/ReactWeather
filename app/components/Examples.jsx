@@ -1,11 +1,5 @@
 var React = require('react');
 
-// var Examples = React.createClass({
-// 	render: function () {
-	
-// 	}
-// });
-
 var Examples = (props) => {
 		return (
           <div>
