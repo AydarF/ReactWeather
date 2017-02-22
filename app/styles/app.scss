@@ -10,3 +10,53 @@ $title-color: #457;
 input[type=search] {
 	box-shadow: none;
 }
+
+p {
+	color: #fff;
+}
+
+body {
+  background: cornsilk;
+  background-image: url('../../public/img/canyon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.result {
+	color: #fff;
+}
+
+/* Navigation */
+.top-bar, .top-bar ul {
+  background: transparent;
+}
+
+.menu-text, .menu > li > a {
+  color: #fff;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  height: 75px;
+  padding: 10px;
+}
+
+.footer p, .footer a {
+  margin-bottom: 0;
+  color: #fff;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.menu>li>a:hover, .footer a:hover {
+  color: #1468a0;
+}

@@ -7,7 +7,7 @@ var About = (props) => {
             <p>
               This is is a simple weather application. It was built using:
             </p>
-            <ul>
+            <ul className="result">
               <li>
                 <a href="https://facebook.github.io/react" target="_blank">React</a> - Javascript framework 
               </li>
