@@ -63,14 +63,14 @@ var Weather = React.createClass({
       function renderError () {
         if (typeof errorMessage === 'string') {
           return (
-            <ErrorModal message="City not found"/>
+            <ErrorModal message={errorMessage}/>
           );
         }
       }
 
         return (
       	<div>
-          <h1 className="text-center page-title">Today's Weather:</h1>
+          <h1 className="text-center page-title">Today Weather:</h1>
           <WeatherForm onSearch={this.handleSearch}/>
           {renderMessage()}
           {renderError()}
