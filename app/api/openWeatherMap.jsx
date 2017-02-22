@@ -13,9 +13,9 @@ module.exports = {
         } else {
         	return res.data.main.temp;
         }
-      }, function(err) {
+      }, function(res) {
          // throw new Error(err.res.data.message);
-         throw new Error(err.response.data.message);
+         throw new Error(res.data.message);
       });
 	}
 }

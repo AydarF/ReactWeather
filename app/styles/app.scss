@@ -57,6 +57,10 @@ body {
   transition: color 0.4s ease-in-out;
 }
 
-.menu>li>a:hover, .footer a:hover {
+.menu > li > a:hover, .footer a:hover {
   color: #1468a0;
+}
+
+.menu {
+  display: flex;
 }
