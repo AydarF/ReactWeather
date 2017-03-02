@@ -3,10 +3,8 @@ var React = require('react');
 var Footer = (props) => {
 	return (
       <footer className="footer">
-        <div className="row full-width">
-          <div className="columns medium-6 large-4 small-centered">
-            <p>Made by <a href="https://github.com/AydarF/" target="_blank">Aydar Fayzullin</a></p>
-          </div>
+        <div className="wrap row small-up-1 medium-up-3">
+            <p className="text-center footer-text">Made by <a href="https://github.com/AydarF/" target="_blank">Aydar Fayzullin</a></p>
         </div>
       </footer>    
 	);

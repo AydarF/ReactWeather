@@ -1,6 +1,6 @@
 $space-large: 2.5rem;
 $title-color: cornsilk;
-
+$white-color: #fff;
 .page-title {
 	color: $title-color;
 	margin-top: $space-large;
@@ -12,21 +12,44 @@ input[type=search] {
 }
 
 p {
-	color: #fff;
+	color: #FBEEFF;
 }
+
+#error-modal p {
+  color: black;
+} 
 
 body {
   background: #457;
-  background-image: url('../../public/img/canyon.jpg');
+  background-image: url('../../public/img/do.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 }
 
-.result {
-	color: #fff;
+.result, .result > li > a {
+  color: $white-color; 
 }
+
+.about-page > ul > li {
+  color: $white-color;
+  a {
+    color: $white-color;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+.examples-page > ol > li {
+  color: $white-color;
+  a {
+    color: $white-color;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+  }
+}
+
 
 /* Navigation */
 .top-bar, .top-bar ul {
@@ -34,33 +57,338 @@ body {
 }
 
 .menu-text, .menu > li > a {
-  color: #fff;
-  -webkit-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
+  color: $white-color;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+//Weather message in weather.jsx
+.w-message {
+    padding-top: 15%;
 }
 
 /* Footer */
 .footer {
   position: absolute;
-  left: 0;
+  display: block;
+  background: transparent;
   bottom: 0;
   right: 0;
+  left: 0;
   text-align: center;
   height: 75px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .footer p, .footer a {
   margin-bottom: 0;
-  color: #fff;
-  -webkit-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
+  text-align: center;
+  color: $white-color;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
-.menu > li > a:hover, .footer a:hover {
-  color: #1468a0;
+.menu > li > a:hover, .footer a:hover, .about-page > ul > li > a:hover , .examples-page > ol > li > a:hover {
+  color: #EE7738;
 }
 
-.menu {
+
+/* ======= (iPhone 5 portrait) ======= */ 
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation: portrait) {
+
+.top-bar {
+  font-size: 0.7em;
+  display: -webkit-flex; 
+  -webkit-flex-flow: row wrap; 
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.top-bar li {
+  -webkit-flex: 1;
+   flex: 1;
+}
+
+.top-bar-left {
+  padding-left: 2%;
+}
+
+.top-bar-right .searcher {
+  margin-left: -4px;
+}
+
+.top-bar-right .button {
+  margin-left: -11px;
+  padding: 11.5px;
+}
+
+
+//Main Block
+.main-block {
+  font-size: 0.7em;
+}
+
+//Weather message in weather.jsx
+.w-message {
+    padding-top: 10%;
+}
+
+.footer p {
+  padding-top: 25px;
+  font-size: 0.7em;
+}
+
+}
+
+/* ======= (iPhone 5 landscape) ======= */ 
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation: landscape) {
+
+.top-bar-left {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  display: -webkit-flex;  
   display: flex;
 }
+.top-bar-right {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  display: -webkit-flex;  
+  display: flex;
+}
+
+ul .menu li {
+  position: relative;
+  display: block;
+}
+
+}
+
+/* ======= (iPhone 6 portrait) ======= */ 
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation: portrait) {
+
+.top-bar {
+  font-size: 0.8em;
+  display: -webkit-flex; 
+  -webkit-flex-flow: row wrap; 
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.top-bar-right {
+  padding-left: 3.5%;
+}
+
+.top-bar-left {
+  margin-left: -2%;
+}
+
+//Main Block
+.main-block {
+  padding-top: 10%;
+  font-size: 0.8em;
+}
+//Weather message in weather.jsx
+.w-message {
+    padding-top: 15%;
+}
+
+.footer p {
+  font-size: 0.8em;
+}
+
+}
+
+
+/* ======= (iPhone 6 landscape) ======= */ 
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation: landscape) {
+
+
+}
+
+/* ======= (iPhone 6+ portrait) ======= */ 
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation: portrait) {
+
+// Navigation
+.top-bar {
+  margin: 2px;
+  padding: 2px;
+  font-size: 1em;
+  display: -webkit-flex; 
+  -webkit-flex-flow: row wrap; 
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.top-bar li {
+  -webkit-flex: 1;
+   flex: 1;
+}
+
+.top-bar-left {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.top-bar-right {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-left: 9%;
+}
+
+.menu > li {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+//Main Block
+.main-block {
+  margin-top: 25%;
+}
+
+//Weather message in weather.jsx
+.w-message {
+    padding-top: 3%;
+}
+
+//Footer
+.footer p {
+  font-size: 1em;
+}
+
+}
+
+/* ======= ( iPhone 6+ landscape) ======= */ 
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation: landscape) {
+
+
+}
+
+/* ======= (iPhone 6s portrait) ======= */ 
+@media only screen and (min-device-width : 750px) and (max-device-width : 1334px) and (orientation: portrait) {
+// Navigation
+.top-bar {
+  margin: 2px;
+  padding: 2px;
+  font-size: 1.5em;
+  display: -webkit-flex; 
+  -webkit-flex-flow: row wrap; 
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.7em;
+}
+
+.top-bar li {
+  -webkit-flex: 1;
+   flex: 1;
+}
+
+.top-bar-left {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+.top-bar-right {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-top: 3%;
+}
+
+.menu > li {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+//Main Block
+.main-block {
+  margin-top: 15%;
+}
+
+.about-page {
+    font-size: 1.7em;
+}
+
+.examples-page {
+    font-size: 1.7em;
+}
+
+//Weather message in weather.jsx
+.w-message {
+    padding-top: 40%;
+}
+
+//Footer
+.footer p {
+  font-size: 1.7em;
+}
+
+}
+
+/* ======= ( iPhone 6s landscape) ======= */ 
+@media only screen and (min-device-width : 750px) and (max-device-width : 1334px) and (orientation: landscape) {
+ 
+
+}
+
+/* ======= (Samsung Galaxy S7 portrait) ======= */ 
+@media only screen and (min-device-width : 1440px) and (max-device-width : 2560px) and (orientation: portrait) {
+
+// Navigation
+.top-bar {
+  margin: 2px;
+  padding: 5px;
+  font-size: 2.1em;
+  display: -webkit-flex; 
+  -webkit-flex-flow: row wrap; 
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.top-bar li {
+  -webkit-flex: 1;
+   flex: 1;
+}
+
+.top-bar-left {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.top-bar-right {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu > li {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+//Main Block
+.main-block {
+  font-size: 3em;
+  margin-top: 50%;
+}
+.about-page {
+ padding: 0 10% 0; 
+}
+
+//Footer
+.footer p {
+  font-size: 2.1em;
+}
+
+}
+
+/* ======= ( Samsung Galaxy S7 landscape) ======= */ 
+@media only screen and (min-device-width : 1440px) and (max-device-width : 2560px) and (orientation: landscape) {
+
+}
+
+//Changes: bg-image footer main layout

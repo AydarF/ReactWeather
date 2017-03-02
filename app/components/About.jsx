@@ -2,12 +2,12 @@ var React = require('react');
 
 var About = (props) => {
 	return (
-		  <div>
+		  <div className="about-page">
             <h1 className="text-center page-title">About</h1>
             <p>
-              This is is a simple weather application. It was built using:
+              This is a simple weather application. It was built using:
             </p>
-            <ul className="result">
+            <ul>
               <li>
                 <a href="https://facebook.github.io/react" target="_blank">React</a> - Javascript framework 
               </li>
