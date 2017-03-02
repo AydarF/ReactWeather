@@ -9,6 +9,11 @@ $white-color: #fff;
 
 input[type=search] {
 	box-shadow: none;
+  border-radius: 2px;
+}
+
+.button {
+  border-radius: 2px;
 }
 
 p {
@@ -96,8 +101,13 @@ body {
 /* ======= (iPhone 5 portrait) ======= */ 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation: portrait) {
 
+.page-title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .top-bar {
-  font-size: 0.7em;
+  font-size: 0.8em;
   display: -webkit-flex; 
   -webkit-flex-flow: row wrap; 
   display: flex;
@@ -110,8 +120,13 @@ body {
 }
 
 .top-bar-left {
-  padding-left: 2%;
+  margin-left: -6px;
 }
+
+.top-bar-left .menu li {
+  padding-top: 4px;
+} 
+
 
 .top-bar-right .searcher {
   margin-left: -4px;
@@ -125,7 +140,12 @@ body {
 
 //Main Block
 .main-block {
-  font-size: 0.7em;
+  font-size: 0.8em;
+}
+
+.about-page .page-title, .examples-page .page-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 //Weather message in weather.jsx
@@ -135,7 +155,7 @@ body {
 
 .footer p {
   padding-top: 25px;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 }
