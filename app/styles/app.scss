@@ -9,7 +9,7 @@ $white-color: #fff;
 
 input[type=search] {
 	box-shadow: none;
-  border-radius: 2px;
+  border-radius: none;
 }
 
 .button {
@@ -150,7 +150,12 @@ body {
 
 //Weather message in weather.jsx
 .w-message {
-    padding-top: 10%;
+    padding-top: 12%;
+    .page-title {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+    }
 }
 
 .footer p {
